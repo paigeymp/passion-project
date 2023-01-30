@@ -1,10 +1,11 @@
 :root {
   --primary-font: "Poppins", sans-serif;
+  --primary-color: #272044;
 }
 
 body {
   font-family: var(--primary-font);
-  background: #272044;
+  background: var(--primary-color);
 }
 
 .container {
@@ -14,13 +15,25 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr;
   grid-gap: 64px;
+}
+
+.img-responsive {
+  max-width: 100%;
+}
+
+.grid-2-columns {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-3-columns-narrow {
+  grid-template-columns: 1fr 2fr 2fr;
 }
 
 section {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 100px 0;
 }
 
 header {
@@ -60,7 +73,7 @@ header a {
   font-size: 14px;
   line-height: 1.5;
   text-align: center;
-  color: #272044;
+  color: var(--primary-color);
   padding: 16px 32px;
   margin-top: 32px;
   display: inline-block;
@@ -68,6 +81,38 @@ header a {
   text-transform: uppercase;
   background-color: white;
   text-decoration: none;
+}
+
+main {
+  background: white;
+}
+
+main h2 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 5px;
+  color: var(--primary-color);
+  opacity: 0.3;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+main h3 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.5;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+main p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--primary-color);
+  opacity: 0.7;
 }
 
 footer {
@@ -79,7 +124,6 @@ footer {
     url("../images/footer-ski.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 100px 0;
 }
 
 footer h3 {
@@ -125,5 +169,14 @@ footer a {
 
   header h3 {
     font-size: 12px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 32px;
+  }
+
+  section {
+    padding: 30px;
   }
 }
